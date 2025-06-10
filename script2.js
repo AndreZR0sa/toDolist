@@ -13,5 +13,30 @@ else{
 btnAdd.addEventListener("click",criarTarefa);
 
 function criarTarefa(){
+    const listItem = document.createElement('li')
+    listItem.textContent = textoTarefa.value;
+    taskList.appendChild(listItem);
     
+    const removerButton = document.createElement('button')
+    removerButton.id = "remove"
+    removerButton.textContent = "X"
+
+    removerButton.addEventListener("click",function(){
+        taskList.removeChild(listItem)
+        taskList.removeChild(removerButton)
+        taskList.removeChild(concluirButton)
+    })
+
+    const concluirButton = document.createElement('button')
+    concluirButton.id = "conclui"
+    concluirButton.textContent = "✓"
+
+    concluirButton.addEventListener("click",function(){
+        listItem.classList.toggle('completed')
+    })
+
+    let buttonItem = document.createElement('div')
+    listItem.appendChild(buttonItem)
+    buttonItem.appendChild(removerButton)
+    buttonItem.appendChild(concluirButton)
 }
