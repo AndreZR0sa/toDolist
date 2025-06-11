@@ -16,6 +16,7 @@ function criarTarefa(){
     const listItem = document.createElement('li')
     listItem.textContent = textoTarefa.value;
     taskList.appendChild(listItem);
+    document.getElementById('textoTarefa').value = "";
     
     const removerButton = document.createElement('button')
     removerButton.id = "remove"
