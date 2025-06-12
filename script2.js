@@ -50,4 +50,5 @@ function criarTarefa(){
     buttonItem.appendChild(removerButton)
     buttonItem.appendChild(concluirButton)
 }
+let
 }
