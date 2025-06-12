@@ -4,7 +4,7 @@ const taskList = document.getElementById('taskList');
 const titulo = document.getElementById('titulo');
 
 let nome = prompt("Informe seu nome:")
-tarefa.focus()
+tarefa.focus();
 if (nome==""){
     titulo.innerHTML = `Lista de Tarefas`
 }
